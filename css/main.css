@@ -1,0 +1,386 @@
+@charset "utf-8";
+
+html {
+
+    font-family: 'Noto Sans', sans-serif;
+    letter-spacing: -0.05em;
+    font-size: 16px;
+    color :#1d1d1f;
+    scroll-behavior: smooth;
+
+}
+
+body {
+    /*가로 스크롤 삭제*/
+    overflow-x: hidden;
+    background-color: #1d1d1f;
+
+}
+
+a {
+    /* <a> tag 언더바 삭제 */
+    text-decoration: none;
+}
+
+b {
+
+     text-shadow: 2px 2px 4px black;
+}
+
+.text {
+
+    /* 메인page text에 typing 효과 */
+        position: absolute; 
+        border-right: .05em solid #f5f5f7;
+        animation:  cursor 0.5s ease infinite;
+        top : 35%;
+        left : 20%;
+        color: #f5f5f7;        
+        font-size: 6rem;
+
+  }
+  
+  @keyframes cursor {
+
+    50% 
+    {
+      border-color: transparent;
+    }
+
+  }
+
+  #section-0 .scroll_down {
+
+      /* scroll icon의 Animation 효과 */
+      position: absolute;
+
+      left: 48%;
+
+      width: 80px;
+      height: 80px;
+
+      animation-name: scroll_down;
+      animation-duration: 1.5s;
+      animation-iteration-count: infinite;
+
+  }
+
+  @keyframes scroll_down {
+
+    from    
+    {
+        bottom:25%;
+    }
+
+    to 
+    {
+        bottom:22%;
+    }   
+
+  }
+
+.main_page { 
+
+    background-color: #a7a7ad94;
+
+}
+
+.message {
+
+    display: flex;
+    justify-content: center;
+    text-align: center;    
+    font-size: 4.5rem;
+    font-weight: bold;
+    opacity: 0;
+    text-shadow: 2px 2px 4px black;
+
+}
+
+.sticky-elem-canvas {
+
+    position: fixed;
+
+}
+
+#main-canvas {
+
+    width: 100%;
+    height: 100%;
+
+}
+
+.local-nav {
+
+    position: sticky;
+    display: none;   
+    background-color: #343435;
+    height: 70px;
+    z-index: 1;
+    top : 0;
+
+}
+
+.local-nav a {
+
+    color: #f5f5f7;
+
+}
+
+.local-nav-links {
+
+    display: flex;
+    justify-content: space-between;
+    
+    /* 너비 및 마진설정 */
+    max-width: 1000px;
+    margin: 0 auto;
+    height: 100%;
+    align-items: center;
+    line-height: 44px;
+    
+}
+
+.local-nav-item {
+
+    margin-right: 100px;
+    text-shadow: 2px 2px 4px black;
+
+}
+
+.lc-left {
+
+    font-size: 1.8rem;
+    font-weight: 600;
+
+}
+
+.lc-right {
+
+    font-size: 1.3rem;  
+
+}
+
+.lc-right a {
+
+  text-decoration: none;
+  display: inline-block;
+  padding: 1px;
+  position: relative;
+
+}
+
+.lc-right a:after {    
+
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #f5f5f7;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+
+}
+
+.lc-right a:hover:after { 
+
+  width: 100%; 
+  left: 0; 
+  
+}
+
+
+.self-introduction {
+
+    width: 100%;   
+    margin: 0 auto;
+    font-size: 2rem;
+
+}
+
+.self-introduction b {
+
+    font-size : 3em;
+
+}
+
+.cls_AboutMe {
+
+    text-align: center;
+    height: 1000px;
+    padding-top : 50px;
+
+}
+
+.cls_AboutMe img {
+
+    width: 500px;
+    height: 500px;
+    border-radius: 70%;    
+
+}
+
+.cls_AboutMe .text-box {
+
+    margin : auto;
+    border: 3px solid #f5f5f7;
+    width: 1000px;
+
+}
+
+.cls_Skills {
+
+    text-align: center;
+    padding-top : 50px;
+    
+}
+
+.cls_Skills img {
+
+    width: 80px;
+    height: 80px;
+
+}
+
+.cls_Skills .p_title {
+
+    font-size: 2em;
+}
+
+.cls_Skills .p_skills {
+
+    position: absolute;
+    left : 600px;
+
+}
+
+.cls_Project {
+
+    text-align: center;
+    padding-top : 50px;
+
+}
+
+.cls_Project #first_project {
+
+    display: flex;
+    border: #f5f5f7 solid 1px;
+    width: 80%;
+    height: 450px;
+    margin: auto;
+
+}
+
+.cls_Project .Project_img{
+
+    width: 100%;
+    height: 100%;
+
+}
+
+.Project_img .first_video {
+
+    width: 100%;
+    height: 100%;
+}
+
+.cls_Project .Project_explain {
+
+    width: 100%;
+    color :#f5f5f7;
+    text-align: left;
+    margin : 15px;
+    overflow-y: scroll;  
+    
+}
+
+/* scroll bar가 보이지 않지만 기능은 작동*/
+.cls_Project .Project_explain::-webkit-scrollbar {
+    display: none; 
+
+}
+
+.Project_explain .explain_title {
+
+    color: #3b94d2;
+}
+
+.Project_explain .explain_text {
+
+    color: #f5f5f7;
+}
+
+.cls_Contact {
+
+    text-align: center;
+    font-size: 1.5em;
+    color: #f5f5f7;
+
+}
+
+.cls_Contact b {
+
+    font-size: 2em;
+
+}
+
+.cls_Contact a {
+
+    text-decoration: underline;
+    color: #f5f5f7;
+
+}
+
+.cls_Contact img{
+
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+
+}
+
+.sticky-elem {
+
+    display: none;
+    position : fixed;    
+    top : 350px;
+    width : 100%;
+    color: #f5f5f7;
+
+}
+
+#section-1 {
+
+    background-color: #3f3f43d0;
+    color : #f5f5f7;
+    margin-top: 200px;
+    opacity: 0;
+}
+
+#section-2 {
+
+    background-color: #1d1d1f;
+    color : #f5f5f7;
+}
+
+#show-section-0 #section-0 .sticky-elem, 
+#show-section-2 #section-2 .sticky-elem {
+
+    display: block;
+
+}
+
+#show-section-1 #section-0 .sticky-elem-canvas,
+#show-section-2 #section-0 .sticky-elem-canvas {
+
+    display: none;
+
+}
+
+
+
+
+
